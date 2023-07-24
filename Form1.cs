@@ -63,6 +63,8 @@ namespace member
 
             //下方產生年份的下拉選單 清單項目(今天的年-> 130年前的年)內容
             int iYoT = DateTime.Today.Year;
+            //自動取得系統 年的值，做為選單的預設值
+            cbx_BDY.Text = DateTime.Today.Year.ToString();
             for (int i = iYoT; i >= iYoT - 130; i--) 
             { cbx_BDY.Items.Add(i); }
 
@@ -86,11 +88,11 @@ namespace member
             if (iMth == 2)
             {
                 int iYr = int.Parse(cbx_BDY.Text);
-                if (iYr % 400 == 0)
+                if (iYr % 400 == 0)  //判斷是否為閏年
                 { iDays = 29; }
                 else
                 {
-                    if (iYr % 4 == 0 && iYr % 100 != 0)
+                    if (iYr % 4 == 0 && iYr % 100 != 0) //判斷是否為閏年
                     { iDays = 29; }
                     else
                     { iDays = 28; }

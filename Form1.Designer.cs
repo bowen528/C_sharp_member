@@ -203,7 +203,6 @@ namespace member
             this.cbx_BDY.Name = "cbx_BDY";
             this.cbx_BDY.Size = new System.Drawing.Size(63, 24);
             this.cbx_BDY.TabIndex = 9;
-            this.cbx_BDY.Text = "2000";
             this.cbx_BDY.SelectedIndexChanged += new System.EventHandler(this.cbx_BDY_SelectedIndexChanged);
             // 
             // label4
